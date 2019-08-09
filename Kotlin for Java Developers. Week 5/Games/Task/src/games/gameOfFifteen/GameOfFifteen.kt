@@ -5,15 +5,20 @@ import board.Direction
 import board.createGameBoard
 import games.game.Game
 
-/*
+/**
  * Implement the Game of Fifteen (https://en.wikipedia.org/wiki/15_puzzle).
  * When you finish, you can play the game by executing 'PlayGameOfFifteen'.
+ *
+ * Class to implement overriden methods for GameOfFifteen
  */
-
 class GameOfFifteen(val initializer: GameOfFifteenInitializer): Game
 {
     val board = createGameBoard<Int?>(4)
 
+    /**
+    * Function to initialize the game of fifteen board. 
+    * It creates a 4x4 board of cells and inserts numbers from 1 to 15 randomly.
+    */
     override fun initialize() {
         val permutation = initializer.initialPermutation
 
@@ -25,8 +30,14 @@ class GameOfFifteen(val initializer: GameOfFifteenInitializer): Game
         }
     }
 
+    /**
+    * Function to determine if a move can be done the game of fifteen board. 
+    */
     override fun canMove(): Boolean = true
 
+    /**
+    * Function to determine if a player has won the game of fifteen board. 
+    */
     override fun hasWon(): Boolean {
         var won = true
         var iterator = 1
@@ -44,6 +55,11 @@ class GameOfFifteen(val initializer: GameOfFifteenInitializer): Game
         return won && get(board.width, board.width) == null
     }
 
+    /**
+    * Function to process a move can be done the game of fifteen board. 
+    * A cell is moved to an adjacent empty spot when clicked by the user. 
+    * It can move only in 4 directions: Up, Down, Right and Left.
+    */
     override fun processMove(direction: Direction) {
         val emptyCell = board.find { it == null }!!
         val neighbor: Cell
@@ -53,9 +69,14 @@ class GameOfFifteen(val initializer: GameOfFifteenInitializer): Game
         board[neighbor] = null
     }
 
+    /**
+    * Function to get a cell in the game of fifteen board. 
+    */
     override fun get(i: Int, j: Int): Int? = board[board.getCell(i,j)]
 
 }
 
-
+/**
+* Function to randomly initilialize the cells in the game of fifteen board. 
+*/    
 fun newGameOfFifteen(initializer: GameOfFifteenInitializer = RandomGameInitializer()): Game = GameOfFifteen(initializer)
