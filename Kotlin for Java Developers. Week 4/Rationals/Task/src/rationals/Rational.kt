@@ -1,4 +1,4 @@
-package rationals
+
 
 /**
  * This code is written for the programming assignment of the Kotlin Coursera Assignment -  Week 4.
