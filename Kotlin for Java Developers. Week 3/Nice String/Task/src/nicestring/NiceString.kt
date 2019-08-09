@@ -15,9 +15,7 @@
 package nicestring
 
 /**
- * This class validates the string against rule 1. Returns true/ false based on the validation.
- * @param Input String
- * @return True or False
+ * This function validates the string against rule 1. Returns true/ false based on the validation.
  */
 fun checkRule1(input: String): Boolean
 {
@@ -30,8 +28,6 @@ fun checkRule1(input: String): Boolean
 
 /**
  * This function validates the string against rule 2. Returns true/ false based on the validation.
- * @param Input String
- * @return True or False
  */
 fun checkRule2(input: String): Boolean
 {
@@ -43,8 +39,6 @@ fun checkRule2(input: String): Boolean
 
 /**
  * This function validates the string against rule 3. Returns true/false based on the validation.
- * @param Input String
- * @return True or False
  */
 fun checkRule3(input: String): Boolean
 {
@@ -56,22 +50,16 @@ fun checkRule3(input: String): Boolean
 
 /**
  * This function checks a string for vowels. Returns true/false based on its presence in a list
- * @param Input Character
- * @return True or False
  */
 fun checkVowel(vowel: Char): Boolean = vowel in listOf('a','e','i','o','u')
 
 /**
  * This function validates the string against all rules. Returns true/ false based on the validation.
- * @param Input Rules
- * @return True or False
  */
 fun validateRules(checkRule1: Boolean, checkRule2: Boolean,checkRule3: Boolean) = (checkRule1 && checkRule2) || (checkRule2 && checkRule3) || (checkRule1 && checkRule3)
 
 /**
  * This function validates if a string is nice based on 3 rules. Returns true/ false based on the validation.
- * @param Input String
- * @return True or False
  */
 fun String.isNice(): Boolean {
 
