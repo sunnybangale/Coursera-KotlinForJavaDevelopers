@@ -1,3 +1,23 @@
+/**
+ * This code is written for the programming assignment of the Kotlin Coursera Assignment -  Week 5
+ * It has functions create a Game of 2048 and process the necessary actions involved in it.
+ * 
+ * The functions implemented are:
+ * 1. Initialize
+ * 2. CanMove
+ * 3. HasWon
+ * 4. ProcessMove
+ * 5. Get
+ * 6. Move ValuesInARowOrColumn
+ * 7. MoveValues
+ *
+ * It is written in Kotlin.
+ *
+ * @author Sunny Bangale
+ *
+*/
+
+
 package games.game2048
 
 import board.Cell
