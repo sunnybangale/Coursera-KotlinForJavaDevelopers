@@ -20,9 +20,7 @@
 
 package rationals
 
-import jdk.internal.util.Preconditions
 import java.math.BigInteger
-
 
 data class Rational(val numerator : BigInteger, val denominator : BigInteger): Comparable<Rational>
 {
