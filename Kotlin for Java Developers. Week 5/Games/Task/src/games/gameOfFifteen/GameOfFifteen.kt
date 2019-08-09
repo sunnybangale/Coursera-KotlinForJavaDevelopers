@@ -1,3 +1,20 @@
+/**
+ * This code is written for the programming assignment of the Kotlin Coursera Assignment -  Week 5
+ * It has functions create a Game of Fifteen game and process the necessary actions involved in it.
+ * 
+ * The functions implemented are:
+ * 1. Initialize
+ * 2. CanMove
+ * 3. HasWon
+ * 4. ProcessMove
+ * 5. Get
+ *
+ * It is written in Kotlin.
+ *
+ * @author Sunny Bangale
+ *
+*/
+
 package games.gameOfFifteen
 
 import board.Cell
