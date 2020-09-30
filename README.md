@@ -1,4 +1,4 @@
-# Kotlin for Java Developers 
+# Kotlin for Java Developers - Easy Tutorial
 
 ## About the course
 The **Kotlin** programming language is a modern language that gives you more power for your everyday tasks. 
